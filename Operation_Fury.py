@@ -1,14 +1,14 @@
-#Welcome Message
-#Developer: Ranen Allishaw
-#Version: 1.0
+# Welcome Message
+# Developer: Ranen Allishaw
+# Version: 1.1
 
 """
 Our welcome message will start our program letting
 the drivers know that the InfoTechCenter OS is loading.
 """
 
-#Import any Libraries Here
-import time #I imported the time library for further use in code.
+# Import any Libraries Here
+import time  # I imported the time library for further use in code.
 
 print('\n\033[1;34;48m Welcome to Operation Fury InfoTech Center')
 
