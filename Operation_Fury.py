@@ -9,23 +9,23 @@ the drivers know that the InfoTechCenter OS is loading.
 
 # Import any Libraries Here
 import time  # I imported the time library for further use in code.
+import sys  # I imported the system library for further use in code.
 
 print('\n\033[1;34;48m Welcome to Operation Fury InfoTech Center')
 
 x = 0
-t = 1
+a = 0
 
 time.sleep(2)
 print('')
 
 while x != 20:
-    p = "\033[1;33;40m Operation Fury's Operating System is Booting Up" + '.' * x
-    print(p)
-    time.sleep(1)
     x += 1
-    t += 1
-    if t == 10:
-        x = 20
-        print('\n\033[1;32;40mDone!')
-    if x == 4:
-        x -= 3
+    b = ("\033[1;33;40m Operation Fury OS is Loading" + "." * a)
+    a = a + 1
+    sys.stdout.write('\r'+b) # \r prints a carriage return first, so `b` is printed on top of the previous line.
+    time.sleep(0.5)
+    if a == 4:
+        a = 0
+    if x == 20:
+        print('\033[1;32;40m Done!')
