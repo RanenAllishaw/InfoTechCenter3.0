@@ -1,6 +1,6 @@
 # Weather
 # Developer: Ranen Allishaw
-# Version 1.1
+# Version 1.2
 
 """
 Create a function for our current weather using the
@@ -17,6 +17,7 @@ This function with choose a random weather condition and have that
 answer stored in its memory with the return function for calling later
 """
 
+
 def weather():
     weatherForcast = ['\033[1;34;40mRainy', 'Snowy', '\033[1;33;40mSunny', '\033[1;37;40mCloudy', '\033[1;37;40mFoggy',
                       '\033[1;33;48mThunder & Lightning', '\033[1;36;40mIcy', 'Windy']
@@ -24,4 +25,12 @@ def weather():
     return weatherCondition
 
 
+weatherAlert = weather()
 
+
+def vehicleResponseSystem():
+    if weatherAlert == '\033[1;36;40mIcy':
+        print('\nVRS has changed your alarm to 30 minutes earlier based on the NWS forcast of ' + weatherAlert)
+
+
+vehicleResponseSystem()
