@@ -19,4 +19,13 @@ def gasLevelGauge():
     return currentGasLevel
 
 
+# Variable calling the gasLevelGauge function to store the value once.
+gasLevelIndicator = gasLevelGauge()
 
+
+def gasLevelAlert():
+    if gasLevelIndicator == '\033[3;31;40mEmpty':
+        print('\033[3;31;40m***WARNING YOU ARE ON EMPTY***\n*Calling Emergency Contacts*')
+
+
+gasLevelAlert()
