@@ -38,6 +38,7 @@ nearestGasStation = listOfGasStations()
 def gasLevelAlert():
     x = 0
     a = 0
+    milesToGasStation = round(random.uniform(1, 25), 1)
     if gasLevelIndicator == '\033[3;31;40mEmpty':
         print('\033[3;31;40m***WARNING YOU ARE ON EMPTY***')
         print('\033[3;31;40m**Contacting Emergency Contacts**')
@@ -58,7 +59,7 @@ def gasLevelAlert():
         time.sleep(.5)
         print("\033[2;33;40mYou're at 1/4 of gas left, now checking google maps for the closest gas station.")
         time.sleep(.75)
-        print('The closest gas station to your area is; ' + nearestGasStation + '.')
+        print('The closest gas station to your area is; ' + nearestGasStation + ', which is ' + str(milesToGasStation) + '.')
     elif gasLevelIndicator == '\033[2;33;40m1/2 Tank':
         print('hi')
     elif gasLevelIndicator == '\033[2;32;40m3/4 Tank':
