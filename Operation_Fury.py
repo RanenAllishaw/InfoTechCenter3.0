@@ -1,6 +1,6 @@
 # Gasoline
 # Developer: Ranen Allishaw
-# Version 1.2
+# Version 1.3
 
 """
 Define a function to check our gas gauge and determine how far we can
@@ -36,15 +36,15 @@ nearestGasStation = listOfGasStations()
 
 
 def gasLevelAlert():
-    x = 0
+    p = 0
     a = 0
-    milesToGasStation = round(random.uniform(1, 25), 1)
+    milesToGasStationquarter = round(random.uniform(1, 45), 1)
     if gasLevelIndicator == '\033[3;31;40mEmpty':
         print('\033[3;31;40m***WARNING YOU ARE ON EMPTY***')
         print('\033[3;31;40m**Contacting Emergency Contacts**')
         time.sleep(.5)
-        while x != 8:
-            x += 1
+        while p != 8:
+            p += 1
             b = ('\033[2;31;40m*Calling' + "." * a + '*')
             a = a + 1
             # \r prints a carriage return first, so `b` is printed on top of the previous line.
@@ -52,14 +52,15 @@ def gasLevelAlert():
             time.sleep(0.5)
             if a == 4:
                 a = 0
-            if x == 8:
+            if p == 8:
                 print('\033[1;33;40m Your Contacts have been notified.')
     elif gasLevelIndicator == '\033[2;31;40m1/4 Tank':
         print('\033[1;31;40m*Warning!*')
         time.sleep(.5)
         print("\033[2;33;40mYou're at 1/4 of gas left, now checking google maps for the closest gas station.")
         time.sleep(.75)
-        print('The closest gas station to your area is; ' + nearestGasStation + ', which is ' + str(milesToGasStation) + '.')
+        print('The closest gas station to your area is; ' + nearestGasStation + ', which is ' + str(
+            milesToGasStationquarter) + '.')
     elif gasLevelIndicator == '\033[2;33;40m1/2 Tank':
         print('hi')
     elif gasLevelIndicator == '\033[2;32;40m3/4 Tank':
