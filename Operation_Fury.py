@@ -60,13 +60,24 @@ def gasLevelAlert():
         print("\033[2;33;40mYou're at 1/4 of gas left, now checking google maps for the closest gas station.")
         time.sleep(.75)
         print('The closest gas station to your area is; ' + nearestGasStation + ', which is ' + str(
-            milesToGasStationquarter) + '.')
+            milesToGasStationquarter) + 'miles away.')
     elif gasLevelIndicator == '\033[2;33;40m1/2 Tank':
-        print('hi')
+        h = ['you will have plenty of gas to get to where you need to go', ' you will have to refuel eventually, you will be notified when is the optimal time to refuel']
+        hyn = random.choice(h)
+        print("\033[2;32;40mYou're at 1/2 of a tank left," + hyn + ".")
     elif gasLevelIndicator == '\033[2;32;40m3/4 Tank':
-        print('hi')
-    elif gasLevelIndicator == '\033[1;32;40mFull':
-        print('hi')
+        h = ['you will have plenty of gas to get to where you need to go',
+             'you will have plenty of gas to get to where you need to go',
+             ' you will have to refuel eventually you, will be notified when is the optimal time to refuel']
+        hyn = random.choice(h)
+        print("\033[2;32;40mYou're at 3/4 of a tank left," + hyn + ".")
+    else:
+        h = ['you will have plenty of gas to get to where you need to go',
+             'you will have plenty of gas to get to where you need to go',
+             'you will have plenty of gas to get to where you need to go',
+             ' you will have to refuel eventually you, will be notified when is the optimal time to refuel']
+        hyn = random.choice(h)
+        print("\033[2;32;40mYou're at full tank," + hyn + ".")
 
 
 gasLevelAlert()
