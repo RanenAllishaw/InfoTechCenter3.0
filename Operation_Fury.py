@@ -21,7 +21,7 @@ print('\n\033[1;34;48m Welcome to Operation Fury InfoTech Center')
 x = 0
 a = 0
 
-time.sleep(2)
+time.sleep(1.25)
 print('')
 
 while x != 12:
@@ -97,8 +97,6 @@ def vehicleResponseSystem():
         print('\033[3;37;40mVRS will allow your car to go at the required speed limit.')
 
 
-vehicleResponseSystem()
-
 # ---------------------------------------------------------------------------------------
 
 # Gasoline
@@ -109,9 +107,6 @@ vehicleResponseSystem()
 Define a function to check our gas gauge and determine how far we can
 go before we need gas based on if, elif, and else conditions.
 """
-
-print('')
-time.sleep(.65)
 
 
 # Gas level finder function.
@@ -161,7 +156,7 @@ def gasLevelAlert():
         print("\033[2;33;40mYou're at 1/4 of gas left, now checking google maps for the closest gas station.")
         time.sleep(.75)
         print('The closest gas station to your area is; ' + nearestGasStation + ', which is ' + str(
-            milesToGasStationquarter) + 'miles away.')
+            milesToGasStationquarter) + ' miles away.')
     elif gasLevelIndicator == '\033[2;33;40m1/2 Tank':
         h = [' you will have plenty of gas to get to where you need to go',
              ' you will have to refuel eventually, you will be notified when is the optimal time to refuel']
@@ -182,4 +177,11 @@ def gasLevelAlert():
         print("\033[2;32;40mYou're at full tank," + hyn + ".")
 
 
+# ---------------------------------------------------------------------------------------
+
+# Call Functions here...
+
+print('')
 gasLevelAlert()
+time.sleep(1.5)
+vehicleResponseSystem()
